@@ -393,7 +393,7 @@ section h2 {
     font-size: 0.9rem;
 }
 
-.mentee-tags {
+.interest-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
