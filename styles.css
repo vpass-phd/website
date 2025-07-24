@@ -284,20 +284,15 @@ section h2 {
     line-height: 1.6;
 }
 
-.member-social {
+/* .member-affiliation {
     display: flex;
     gap: 1rem;
-}
+} */
 
-.social-link {
+.member-affiliation {
     color: #fca5a5;
     text-decoration: none;
     font-weight: 500;
-}
-
-.social-link:hover {
-    text-decoration: underline;
-    color: #ffffff;
 }
 
 /* Advisors Section */
