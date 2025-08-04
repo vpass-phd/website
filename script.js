@@ -420,10 +420,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const menteeGuideToggle = document.getElementById('menteeGuideToggle');
     const menteeGuideContent = document.getElementById('menteeGuideContent');
     
+    console.log('Mentee dropdown elements found:', {
+        toggle: menteeGuideToggle,
+        content: menteeGuideContent
+    });
+    
     if (menteeGuideToggle && menteeGuideContent) {
         menteeGuideToggle.addEventListener('click', () => {
+            console.log('Mentee dropdown toggle clicked');
             menteeGuideToggle.classList.toggle('active');
             menteeGuideContent.classList.toggle('active');
+            
+            console.log('Dropdown state:', {
+                toggleActive: menteeGuideToggle.classList.contains('active'),
+                contentActive: menteeGuideContent.classList.contains('active')
+            });
             
             // Smooth scroll to dropdown if it's opening
             if (menteeGuideContent.classList.contains('active')) {
@@ -451,7 +462,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 menteeGuideContent.classList.remove('active');
             }
         });
+    } else {
+        console.error('Mentee dropdown elements not found!');
     }
 });
 
-console.log('Website loaded successfully! 🚀'); 
+console.log('Website loaded successfully! 🚀');
+
+// Additional debugging for dropdown
+setTimeout(() => {
+    const toggle = document.getElementById('menteeGuideToggle');
+    const content = document.getElementById('menteeGuideContent');
+    console.log('Dropdown elements after timeout:', { toggle, content });
+    
+    if (toggle) {
+        console.log('Toggle element styles:', window.getComputedStyle(toggle));
+    }
+    if (content) {
+        console.log('Content element styles:', window.getComputedStyle(content));
+    }
+}, 1000); 
