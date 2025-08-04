@@ -295,6 +295,107 @@ section h2 {
     font-weight: 500;
 }
 
+/* Mentor Guide Dropdown */
+.mentor-guide-dropdown {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle {
+    width: 100%;
+    background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.dropdown-toggle:hover {
+    background: linear-gradient(135deg, #7f1d1d 0%, #5b0505 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(153, 27, 27, 0.3);
+}
+
+.dropdown-toggle:active {
+    transform: translateY(0);
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    border-left: 4px solid #991b1b;
+}
+
+.dropdown-content.active {
+    max-height: 2000px;
+    padding: 2rem;
+}
+
+.guide-content {
+    color: #333;
+}
+
+.guide-content h3 {
+    color: #991b1b;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.guide-content h4 {
+    color: #7f1d1d;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.guide-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.guide-content ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.guide-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.guide-content strong {
+    color: #991b1b;
+    font-weight: 600;
+}
+
+/* Mentee Guide Dropdown */
+.mentee-guide-dropdown {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Advisors Section */
 .advisors-grid {
     display: grid;

@@ -376,4 +376,82 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Mentor Guide Dropdown Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mentorGuideToggle = document.getElementById('mentorGuideToggle');
+    const mentorGuideContent = document.getElementById('mentorGuideContent');
+    
+    if (mentorGuideToggle && mentorGuideContent) {
+        mentorGuideToggle.addEventListener('click', () => {
+            mentorGuideToggle.classList.toggle('active');
+            mentorGuideContent.classList.toggle('active');
+            
+            // Smooth scroll to dropdown if it's opening
+            if (mentorGuideContent.classList.contains('active')) {
+                setTimeout(() => {
+                    mentorGuideToggle.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mentorGuideToggle.contains(e.target) && !mentorGuideContent.contains(e.target)) {
+                mentorGuideToggle.classList.remove('active');
+                mentorGuideContent.classList.remove('active');
+            }
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mentorGuideContent.classList.contains('active')) {
+                mentorGuideToggle.classList.remove('active');
+                mentorGuideContent.classList.remove('active');
+            }
+        });
+    }
+});
+
+// Mentee Guide Dropdown Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const menteeGuideToggle = document.getElementById('menteeGuideToggle');
+    const menteeGuideContent = document.getElementById('menteeGuideContent');
+    
+    if (menteeGuideToggle && menteeGuideContent) {
+        menteeGuideToggle.addEventListener('click', () => {
+            menteeGuideToggle.classList.toggle('active');
+            menteeGuideContent.classList.toggle('active');
+            
+            // Smooth scroll to dropdown if it's opening
+            if (menteeGuideContent.classList.contains('active')) {
+                setTimeout(() => {
+                    menteeGuideToggle.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menteeGuideToggle.contains(e.target) && !menteeGuideContent.contains(e.target)) {
+                menteeGuideToggle.classList.remove('active');
+                menteeGuideContent.classList.remove('active');
+            }
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menteeGuideContent.classList.contains('active')) {
+                menteeGuideToggle.classList.remove('active');
+                menteeGuideContent.classList.remove('active');
+            }
+        });
+    }
+});
+
 console.log('Website loaded successfully! 🚀'); 
