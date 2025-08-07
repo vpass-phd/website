@@ -1090,6 +1090,84 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Guidelines Section */
+.guidelines-content {
+    margin-top: 3rem;
+}
+
+.guideline-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guideline-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guideline-section h3 {
+    color: #5b0505;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #df8585;
+    padding-bottom: 0.5rem;
+}
+
+.guideline-section h4 {
+    color: #5b0505;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.guideline-section p {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.guideline-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.guideline-section ul li {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.guideline-section ul li:before {
+    content: "•";
+    color: #df8585;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.guideline-section ul ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.guideline-section ul ul li {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.guideline-section ul ul li:before {
+    content: "◦";
+    color: #df8585;
+}
+
 /* Resources Page Styles */
 .resources-section {
     padding: 80px 0;
@@ -1184,6 +1262,19 @@ html {
     
     .resource-card h3 {
         font-size: 1.2rem;
+    }
+    
+    .guideline-section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .guideline-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .guideline-section h4 {
+        font-size: 1.1rem;
     }
 }
 
