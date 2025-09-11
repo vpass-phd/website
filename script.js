@@ -467,6 +467,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Guidelines Dropdown Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to create dropdown functionality
+    function createDropdown(toggleId, contentId) {
+        const toggle = document.getElementById(toggleId);
+        const content = document.getElementById(contentId);
+        
+        if (toggle && content) {
+            toggle.addEventListener('click', () => {
+                toggle.classList.toggle('active');
+                content.classList.toggle('active');
+                
+                // Smooth scroll to dropdown if it's opening
+                if (content.classList.contains('active')) {
+                    setTimeout(() => {
+                        toggle.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 100);
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !content.contains(e.target)) {
+                    toggle.classList.remove('active');
+                    content.classList.remove('active');
+                }
+            });
+            
+            // Close dropdown on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && content.classList.contains('active')) {
+                    toggle.classList.remove('active');
+                    content.classList.remove('active');
+                }
+            });
+        }
+    }
+    
+    // Create dropdowns for each guideline section
+    createDropdown('generalInfoToggle', 'generalInfoContent');
+    createDropdown('howItWorksToggle', 'howItWorksContent');
+    createDropdown('yearlyCheckToggle', 'yearlyCheckContent');
+    createDropdown('financialToggle', 'financialContent');
+});
+
 console.log('Website loaded successfully! 🚀');
 
 // Additional debugging for dropdown
