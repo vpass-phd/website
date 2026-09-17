@@ -513,6 +513,8 @@ document.addEventListener('DOMContentLoaded', () => {
     createDropdown('howItWorksToggle', 'howItWorksContent');
     createDropdown('yearlyCheckToggle', 'yearlyCheckContent');
     createDropdown('financialToggle', 'financialContent');
+    createDropdown('previousMentorsToggle', 'previousMentorsContent');
+    createDropdown('previousMenteesToggle', 'previousMenteesContent');
 });
 
 console.log('Website loaded successfully! 🚀');
